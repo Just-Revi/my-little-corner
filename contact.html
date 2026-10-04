@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta property="og:title" content="Hii, Im Revi" />
+  <meta property="og:description" content="Revi - Cover artist. Vocaloid covers, voicebanks and favs." />
+  <meta property="og:image" content="https://just-revi.github.io/my-little-corner/cover.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#ff0aa1" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hii, Im Revi</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=3" />
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -19,15 +25,37 @@
         <a class="btn" href="https://www.tiktok.com/@just_revii" target="_blank" rel="noopener">DM me on TikTok</a>
       </nav>
 
-      <div class="vb-box contact-box">
-        <div>・ Add me on discord: just.alyx</div>
+      <div class="vb-box contact-box contact-row">
+        <div>・ Add me on discord: <b>just.alyx</b></div>
+        <button class="copybtn" type="button" data-copy="just.alyx">copy</button>
       </div>
-      <div class="vb-box contact-box">
-        <div>・ My email: alejooooo3142@gmail.com</div>
+      <div class="vb-box contact-box contact-row">
+        <div>・ My email: <b>alejooooo3142@gmail.com</b></div>
+        <button class="copybtn" type="button" data-copy="alejooooo3142@gmail.com">copy</button>
       </div>
 
-      <div class="footer">teto ate the rest of the page</div>
+      <div class="footer"><a class="egg" href="https://www.youtube.com/watch?v=zRgZu9lGNzU" target="_blank" rel="noopener" title="teto">teto ate the rest of the page</a></div>
     </div>
   </main>
+<script>
+document.querySelectorAll(".copybtn").forEach((btn) => {
+  btn.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(btn.dataset.copy);
+    } catch (e) {
+      const ta = document.createElement("textarea");
+      ta.value = btn.dataset.copy;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      ta.remove();
+    }
+    const old = "copy";
+    btn.textContent = "copied! :3";
+    btn.classList.add("ok");
+    setTimeout(() => { btn.textContent = old; btn.classList.remove("ok"); }, 1200);
+  });
+});
+</script>
 </body>
 </html>

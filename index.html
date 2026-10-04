@@ -2,10 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta property="og:title" content="Hii, Im Revi" />
+  <meta property="og:description" content="Revi - Cover artist. Vocaloid covers, voicebanks and favs." />
+  <meta property="og:image" content="https://just-revi.github.io/my-little-corner/cover.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#ff0aa1" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hii, Im Revi</title>
   <meta name="description" content="Revi - Cover artist. voicebanks, popular covers and favs." />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=3" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
 </head>
@@ -28,6 +34,8 @@
         <a class="btn" href="contact.html">✉ Contact me</a>
       </nav>
 
+      <button class="btn random" id="randomBtn" type="button">🎲 surprise me — random cover</button>
+
       <div class="stats">
         <div class="stats-title">total covers: <b>52</b> ♪</div>
         <div class="stats-grid">
@@ -38,6 +46,17 @@
           <span class="stat eng-cevio"><b>2</b> CeVIO</span>
           <span class="stat eng-voisona"><b>3</b> VoiSona</span>
         </div>
+      </div>
+
+      <div class="featured">
+        <div class="featured-label">★ featured cover</div>
+        <a class="cover" id="featLink" href="https://www.youtube.com/watch?v=fBjo1sokRZ0" target="_blank" rel="noopener">
+          <div class="thumb">
+            <img id="featImg" src="https://i.ytimg.com/vi/fBjo1sokRZ0/hqdefault.jpg" alt="featured cover thumbnail" loading="lazy" />
+            <span class="playbtn" aria-hidden="true">▶</span>
+          </div>
+          <div class="ctitle" id="featTitle">ベノム (Venom) Ft. IA:[R]</div>
+        </a>
       </div>
 
       <div class="social-label">find me on</div>
@@ -64,8 +83,27 @@
         </a>
       </div>
 
-      <div class="footer">teto ate the rest of the page</div>
+      <div class="footer"><a class="egg" href="https://www.youtube.com/watch?v=zRgZu9lGNzU" target="_blank" rel="noopener" title="teto">teto ate the rest of the page</a></div>
     </div>
   </main>
+<script src="covers.js?v=1"></script>
+<script>
+(function () {
+  // Botón random: usa solo el id
+  document.getElementById("randomBtn").addEventListener("click", () => {
+    const c = COVERS[Math.floor(Math.random() * COVERS.length)];
+    window.open("https://www.youtube.com/watch?v=" + c.id, "_blank", "noopener");
+  });
+  // Featured: video diferente en cada visita (id + título del mismo archivo)
+  const pick = COVERS[Math.floor(Math.random() * COVERS.length)];
+  const fL = document.getElementById("featLink");
+  const fI = document.getElementById("featImg");
+  const fT = document.getElementById("featTitle");
+  fL.href = "https://www.youtube.com/watch?v=" + pick.id;
+  fI.src = "https://i.ytimg.com/vi/" + pick.id + "/hqdefault.jpg";
+  fI.alt = pick.title + " thumbnail";
+  fT.textContent = pick.title;
+})();
+</script>
 </body>
 </html>
