@@ -38,7 +38,26 @@ body {
   padding: 32px 28px 24px;
   box-shadow: 8px 8px 0 var(--ink);
   text-align: center;
+  position: relative;
 }
+
+.theme-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1;
+  background: var(--white);
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  padding: 6px 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.theme-btn:hover { background: var(--magenta); color: #fff; }
 
 .badge {
   display: inline-block;
@@ -406,3 +425,28 @@ h2 { margin: 0 0 8px; font-size: 30px; }
   h1 { font-size: 44px; }
   .card { padding: 24px 18px; }
 }
+
+/* dark mode — Venom nights */
+.dark {
+  --pink-bg: #0b0d20;
+  --pink-deep: #221a4e;
+  --ink: #f2ecf7;
+  --white: #181b35;
+}
+
+.dark body { background-image: none; }
+
+.dark .cover,
+.dark .stats,
+.dark .vb-box { background: #202449; }
+
+.dark .bio strong { background: #ff0aa1; color: #fff; }
+
+.dark .rank.r2 { color: #12142f; }
+
+/* voices too dark for night boxes get a lighter twin */
+.dark .vb-box span[style*="#1a1a2e"] { color: #d6cff2 !important; }
+.dark .vb-box span[style*="#4a3428"] { color: #c9a37e !important; }
+.dark .vb-box span[style*="#996699"] { color: #bd93d1 !important; }
+.dark .vb-box span[style*="#0000aa"] { color: #7b8cff !important; }
+.dark .vb-box span[style*="#cc164b"] { color: #f0567a !important; }

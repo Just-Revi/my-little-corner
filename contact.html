@@ -3,19 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta property="og:title" content="Hii, Im Revi" />
-  <meta property="og:description" content="this is my personal page :3 � vocaloid covers, voicebanks and more" />
+  <meta property="og:description" content="this is my personal page :3 � vocaloid covers, voicebanks and more" />
   <meta property="og:image" content="https://just-revi.github.io/my-little-corner/cover.jpg" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#ff0aa1" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hii, Im Revi</title>
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=4" />
+  <script>try{var s=localStorage.getItem("revi-theme");if(s==="dark"||(!s&&window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches)){document.documentElement.classList.add("dark")}}catch(e){}</script>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
   <main class="wrap">
     <div class="card">
+      <button id="themeBtn" class="theme-btn" type="button" aria-label="toggle dark mode">🌙</button>
       <a class="back" href="index.html">← back to Revi</a>
       <h2>Contact me</h2>
       <p class="sub">For collabs, requests, or just to say hi :3</p>
@@ -56,6 +58,20 @@ document.querySelectorAll(".copybtn").forEach((btn) => {
     setTimeout(() => { btn.textContent = old; btn.classList.remove("ok"); }, 1200);
   });
 });
+</script>
+<script>
+(function () {
+  var btn = document.getElementById("themeBtn");
+  if (!btn) return;
+  function paint() { btn.textContent = document.documentElement.classList.contains("dark") ? "☀️" : "🌙"; }
+  btn.addEventListener("click", function () {
+    var dark = !document.documentElement.classList.contains("dark");
+    document.documentElement.classList.toggle("dark", dark);
+    try { localStorage.setItem("revi-theme", dark ? "dark" : "light"); } catch (e) {}
+    paint();
+  });
+  paint();
+})();
 </script>
 </body>
 </html>

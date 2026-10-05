@@ -11,13 +11,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hii, Im Revi</title>
   <meta name="description" content="this is my personal page :3 — vocaloid covers, voicebanks and more" />
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=4" />
+  <script>try{var s=localStorage.getItem("revi-theme");if(s==="dark"||(!s&&window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches)){document.documentElement.classList.add("dark")}}catch(e){}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
   <main class="wrap">
     <div class="card">
+      <button id="themeBtn" class="theme-btn" type="button" aria-label="toggle dark mode">🌙</button>
       <div class="badge">Cover artist <i>♪</i></div>
       <h1>Revi<span>.</span></h1>
 
@@ -99,6 +101,23 @@
   fI.alt = pick.title + " thumbnail";
   fT.textContent = pick.title;
 })();
+</script>
+<script>
+(function () {
+  var btn = document.getElementById("themeBtn");
+  if (!btn) return;
+  function paint() { btn.textContent = document.documentElement.classList.contains("dark") ? "☀️" : "🌙"; }
+  btn.addEventListener("click", function () {
+    var dark = !document.documentElement.classList.contains("dark");
+    document.documentElement.classList.toggle("dark", dark);
+    try { localStorage.setItem("revi-theme", dark ? "dark" : "light"); } catch (e) {}
+    paint();
+  });
+  paint();
+})();
+</script>
+<script>
+(function(){try{fetch("https://revi-counter.alejooooo3142.workers.dev/ping",{method:"POST",mode:"no-cors",keepalive:true}).catch(function(){})}catch(e){}})();
 </script>
 </body>
 </html>
