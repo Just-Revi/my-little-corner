@@ -52,5 +52,6 @@ const COVERS = [
   { id: "C-KG_CpdyWQ", title: "(Un)Natural Selection Ft. Otomachi Una" },
   { id: "5XZwGf2XFZk", title: "Lemonade Ft. NineZero" },
   { id: "9VQeBsykboQ", title: "祈れやデタラメ (Pray or be Desperate) Ft. Bennet Fantasia" },
-  { id: "VAC7QkAEIvo", title: "しあわせレストラン (Shiawase Restaurant) Ft. Yuma & Otomachi Una" }
+  { id: "VAC7QkAEIvo", title: "しあわせレストラン (Shiawase Restaurant) Ft. Yuma & Otomachi Una" },
+  { id: "NIOzW8JvqMY", title: "失楽ペトリ (Shitsuraku Petori) Ft. Natsume Itsuki, Mai & Kasane Teto" }
 ];
