@@ -41,7 +41,7 @@ const COVERS = [
   { id: "VRYpL0VOwto", title: "化けの花 (BakenoHana) Ft. IA:[R]" },
   { id: "XOS7tiEuPGc", title: "メズマライザー (Mesmerizer) Ft. IA:[R] & Regita Vi" },
   { id: "70bNznWfDUI", title: "Bad Girl Online Ft. IA:[R] & Yuma" },
-  { id: "-KYrJfPSzSw", title: "(Un)Natural Selection (English ver.) Ft. IA:[R]" },
+  { id: "-KYrJfPSzSw", title: "(Un)Natural Selection Ft. IA:[R]" },
   { id: "fBjo1sokRZ0", title: "ベノム (Venom) Ft. IA:[R]" },
   { id: "gwS1mhLgjwc", title: "Whisper Whisper Whisper Ft. IA:[R]" },
   { id: "DkGzs94BzYI", title: "D/N/A Ft. IA:[R] & Otomachi Una" },
