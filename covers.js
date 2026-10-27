@@ -53,5 +53,6 @@ const COVERS = [
   { id: "5XZwGf2XFZk", title: "Lemonade Ft. NineZero" },
   { id: "9VQeBsykboQ", title: "祈れやデタラメ (Pray or be Desperate) Ft. Bennet Fantasia" },
   { id: "VAC7QkAEIvo", title: "しあわせレストラン (Shiawase Restaurant) Ft. Yuma & Otomachi Una" },
-  { id: "NIOzW8JvqMY", title: "失楽ペトリ (Shitsuraku Petori) Ft. Natsume Itsuki, Mai & Kasane Teto" }
+  { id: "NIOzW8JvqMY", title: "失楽ペトリ (Shitsuraku Petori) Ft. Natsume Itsuki, Mai & Kasane Teto" },
+  { id: "4l95nyCqb2c", title: "Gothic and Loneliness Ft. Natsume Itsuki" }
 ];
